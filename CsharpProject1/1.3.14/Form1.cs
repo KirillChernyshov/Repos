@@ -32,7 +32,8 @@ namespace _1._3._14
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 string path = fileDialog.FileName;
-                students = StudentsInBFile.Read(path);
+                StudentsInBFile studentsB = new StudentsInBFile(path);
+                students = studentsB.Read();
                 FillTable(students);
                 show.Visible = true;
                 label1.Visible = true;

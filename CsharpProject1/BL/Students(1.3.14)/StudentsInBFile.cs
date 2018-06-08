@@ -10,22 +10,29 @@ namespace BL
 {
     public class StudentsInBFile
     {
-        public static void Write(Student[] students, string path)
+        string Path { get; set; }
+
+        public StudentsInBFile(string path)
+        {
+            Path = path;
+        }
+
+        public void Write(Student[] students)
         {
             BinaryFormatter formatter = new BinaryFormatter();
                 
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(Path, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, students);
             }
         }
 
-        public static Student[] Read(string path)
+        public Student[] Read()
         {
             Student[] students;
             BinaryFormatter formatter = new BinaryFormatter();
 
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(Path, FileMode.OpenOrCreate))
             {
                 students = (Student[])formatter.Deserialize(fs);
             }
