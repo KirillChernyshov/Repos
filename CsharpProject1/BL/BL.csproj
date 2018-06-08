@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E3B8E4B-2082-44B2-8746-702EF5DAFA6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BL</RootNamespace>
+    <AssemblyName>BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WorkWithTxt%281.1.29%29\AddingNumbersToText.cs" />
+    <Compile Include="SortingOfApartments%284.27%29\Apartment.cs" />
+    <Compile Include="SortingOfApartments%284.27%29\ApartmentGenerator.cs" />
+    <Compile Include="LocationSearch%282.29%29\CellOfChessBoard.cs" />
+    <Compile Include="SortingOfApartments%284.27%29\Query.cs" />
+    <Compile Include="StackUsage%283.29%29\NodeOfStack.cs" />
+    <Compile Include="WorkWithBinary%281.2.29%29\NumericSwap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackUsage%283.29%29\ReversePolishNotation.cs" />
+    <Compile Include="LocationSearch%282.29%29\SearchOfLocationQueens.cs" />
+    <Compile Include="LocationSearch%282.29%29\SearchOfStrikeZone.cs" />
+    <Compile Include="SortingOfApartments%284.27%29\SortingApartments.cs" />
+    <Compile Include="Students%281.3.14%29\SortOfStudents.cs" />
+    <Compile Include="StackUsage%283.29%29\Stack.cs" />
+    <Compile Include="Students%281.3.14%29\Student.cs" />
+    <Compile Include="Students%281.3.14%29\StudentsInBFile.cs" />
+    <Compile Include="WorkWithBinary%281.2.29%29\WorkWithBFile.cs" />
+    <Compile Include="WorkWithTxt%281.1.29%29\WorkWithTxt.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
