@@ -25,7 +25,8 @@ namespace _3._1._29
         private void start_Click(object sender, EventArgs e)
         {
             string exp = textBox.Text;
-            double r = ReversePolishNotation.HandlerOfExpression(exp);
+            ReversePolishNotation rev = new ReversePolishNotation(exp);
+            double r = rev.HandlerOfExpression();
             textBox.Text = r.ToString();
         }
     }

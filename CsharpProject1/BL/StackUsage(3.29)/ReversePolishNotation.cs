@@ -12,9 +12,16 @@ namespace BL
     */
     public class ReversePolishNotation
     {
-        public static double HandlerOfExpression(string expression)
+        string Expression { get; set; }
+
+        public ReversePolishNotation(string expression)
         {
-            string[] elements = expression.Split(' ');
+            Expression = expression;
+        }
+
+        public double HandlerOfExpression()
+        {
+            string[] elements = Expression.Split(' ');
             Stack operands = new Stack();
 
             for (int i = 0; i < elements.Length; i++)
@@ -34,7 +41,7 @@ namespace BL
             return (double)operands.Get();
         }
 
-        static double DoOperation(double a, double b, string op)
+        double DoOperation(double a, double b, string op)
         {
             double result;
             switch (op)
